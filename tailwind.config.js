@@ -43,6 +43,7 @@ module.exports = {
 				primary: 'hsla(231, 75%, 11%, 1)',
 				accent: 'hsla(209, 79%, 74%, 1)',
 				secondary: 'hsla(205, 46%, 51%, 1)',
+				tertiary: 'hsla(217, 37%, 22%, 1)',
 			},
 			backgroundImage: {
 				'years-pattern': "url('/images/years-pattern.svg')",
@@ -57,6 +58,10 @@ module.exports = {
 			},
 			padding: {
 				6.5: '22px',
+				34: '132px',
+			},
+			fontSize: {
+				'4.5xl': '40px',
 			},
 		},
 	},

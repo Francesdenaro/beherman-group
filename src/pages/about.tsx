@@ -6,6 +6,7 @@ import Header from '../comps/Header';
 
 import Col from '../comps/Layout/Col';
 import Container from '../comps/Layout/Container';
+import NameRole from '../comps/NameRole';
 import SectionTitle from '../comps/SectionTitle';
 
 const Page: NextPage = () => {
@@ -64,13 +65,33 @@ const Page: NextPage = () => {
 							<span className="h-[1px] bg-white lg:mt-6"></span>
 						</Col>
 						<Col className="lg:row-start-2" colStart={[2, null, null, 5]} colEnd={[26, null, null, 14]}>
-							<p className="pt-8 pb-6 text-2xl text-accent lg:pt-3">
+							<p className="pt-8 pb-6 text-2xl text-accent lg:pt-3 lg:pr-12 2xl:pr-16">
 								In a world committed to the ecological transition, we want to make our contribution by building the mobility solutions of tomorrow.
 							</p>
 							<p className="pb-14 leading-7  text-white lg:pb-0">
 								The brands we are working with today, Fuso and Piaggio, are paving the way for new ways of conceiving transportation, on roads all over the world, at city entrances and
 								even within urban traffic.
 							</p>
+						</Col>
+					</Container>
+				</section>
+				<section className="pb-34">
+					<Container className="items-start">
+						<Col className="lg:row-start-1" colStart={[2, null, null, null]}>
+							<SectionTitle>The Board</SectionTitle>
+						</Col>
+						<Col className="row-start-2" colStart={[1, null, null, 2, null]} colEnd={[27, null, null, 19, null]}>
+							<Image alt="Photo of the board members" src="/images/board.jpg" width={942} height={508} />
+						</Col>
+						<Col className="h-full gap-y-6 border-l-tertiary pt-6 lg:row-start-2 lg:gap-0 lg:border-l lg:pl-9 lg:pt-2" colStart={[2, null, null, 20]} colEnd={[27, null, null, null]}>
+							<span className="uppercase tracking-2xl text-white">Left to right</span>
+							<ul className="mb-10 grid grid-cols-2 gap-y-4 gap-x-8 lg:grid-cols-1 lg:gap-y-8">
+								<NameRole name="Paul Borghgraef" role="Director" />
+								<NameRole name="Christian Beherman" role="President" />
+								<NameRole name="Jacques P. Beherman" role="Managing director" />
+								<NameRole name="Olivier Beherman" role="Director" />
+								<NameRole name="Etienne Rosseeuw" role="Director" />
+							</ul>
 						</Col>
 					</Container>
 				</section>
