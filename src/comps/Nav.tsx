@@ -3,6 +3,7 @@ import Col from './Layout/Col';
 import Container from './Layout/Container';
 import Burger from './Svg/Burger';
 import Logo from './Svg/Logo';
+import { motion } from 'framer-motion';
 
 interface NavItemProps {
 	children: React.ReactNode;
@@ -29,7 +30,7 @@ const Nav = ({ pathname }: { pathname: string }) => {
 			</Col>
 			<Col colStart={[22, null, null, 14, null]}>
 				<nav className="hidden lg:block lg:pl-10">
-					<ul className="flex items-center justify-between">
+					<motion.ul className="flex items-center justify-between" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
 						<NavItem href="/">Home</NavItem>
 						<NavItem href="/about">About</NavItem>
 						<NavItem href="#">History</NavItem>
@@ -39,7 +40,7 @@ const Nav = ({ pathname }: { pathname: string }) => {
 								Contact
 							</button>
 						</li>
-					</ul>
+					</motion.ul>
 				</nav>
 				<button className="flex aspect-square w-12 items-center justify-center rounded-full bg-accent p-2 lg:hidden">
 					<Burger />

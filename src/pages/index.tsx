@@ -1,20 +1,14 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import Cta from '../comps/Cta';
 import Footer from '../comps/Footer';
-import Header from '../comps/Header';
 import Col from '../comps/Layout/Col';
 import Container from '../comps/Layout/Container';
-import NameRole from '../comps/NameRole';
 import Nav from '../comps/Nav';
-import SectionTitle from '../comps/SectionTitle';
 
 const Page: NextPage = () => {
 	const { pathname } = useRouter();
-	console.log(pathname);
 	return (
 		<div className="flex h-screen flex-col justify-between bg-primary pt-8">
 			<Head>

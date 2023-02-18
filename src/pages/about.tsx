@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -12,7 +13,6 @@ import SectionTitle from '../comps/SectionTitle';
 
 const Page: NextPage = () => {
 	const { pathname } = useRouter();
-	console.log(pathname);
 	return (
 		<div className="bg-primary">
 			<Head>
@@ -23,7 +23,7 @@ const Page: NextPage = () => {
 			<Header pathname={pathname} />
 
 			<main>
-				<section>
+				<motion.section initial={{ opacity: 0, x: -200 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
 					<Container className="lg:items-start">
 						<Col className="lg:row-start-2" colStart={[1, null, null, 2, null]} colEnd={[27, null, null, 11, null]}>
 							<Image alt="Image of a panoramic view of the office" src="/images/panoramic.jpg" width={554} height={376} />
@@ -42,7 +42,7 @@ const Page: NextPage = () => {
 							</p>
 						</Col>
 					</Container>
-				</section>
+				</motion.section>
 
 				<aside className="lg:pt-28 lg:pb-36">
 					<Container>
@@ -57,7 +57,7 @@ const Page: NextPage = () => {
 					</Container>
 				</aside>
 
-				<section>
+				<motion.section initial={{ opacity: 0, x: 200 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
 					<Container className="lg:items-start">
 						<Col className="lg:pl-10" colStart={[1, null, null, 15, null]} colEnd={[27, null, null, 26, null]}>
 							<Image alt="Image of a blue truck in a city" src="/images/truck.jpg" width={554} height={376} />
@@ -69,19 +69,21 @@ const Page: NextPage = () => {
 							<span className="h-[1px] bg-white lg:mt-6"></span>
 						</Col>
 						<Col className="lg:row-start-2" colStart={[2, null, null, 5]} colEnd={[26, null, null, 14]}>
-							<p className="pt-8 pb-10 text-2xl text-accent lg:pt-3 lg:pr-12 2xl:pr-16">
-								In a world committed to the ecological transition, we want to make our contribution by building the mobility solutions of tomorrow.
-							</p>
-							<p className="pb-14 leading-7  text-white lg:pb-0">
-								The brands we are working with today, Fuso and Piaggio, are paving the way for new ways of conceiving transportation, on roads all over the world, at city entrances and
-								even within urban traffic.
-							</p>
+							<div>
+								<p className="pt-8 pb-10 text-2xl text-accent lg:pt-3 lg:pr-12 2xl:pr-16">
+									In a world committed to the ecological transition, we want to make our contribution by building the mobility solutions of tomorrow.
+								</p>
+								<p className="pb-14 leading-7  text-white lg:pb-0">
+									The brands we are working with today, Fuso and Piaggio, are paving the way for new ways of conceiving transportation, on roads all over the world, at city entrances
+									and even within urban traffic.
+								</p>
+							</div>
 						</Col>
 					</Container>
-				</section>
+				</motion.section>
 			</main>
 
-			<section className="pb-14 lg:pb-34">
+			<motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} className="pb-14 lg:pb-34">
 				<Container className="lg:items-start">
 					<Col className="lg:row-start-1" colStart={[2, null, null, 3]}>
 						<SectionTitle>The Board</SectionTitle>
@@ -100,7 +102,7 @@ const Page: NextPage = () => {
 						</ul>
 					</Col>
 				</Container>
-			</section>
+			</motion.section>
 
 			<Footer />
 		</div>
