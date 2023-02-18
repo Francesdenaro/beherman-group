@@ -7,10 +7,10 @@ const Header = () => {
 		<header className="bg-years-pattern bg-center bg-no-repeat py-8">
 			<Nav />
 			<Container>
-				<Col colStart={[2, null, null, 3, null]} colEnd={[24, null, null, 20, null]}>
+				<Col colStart={[2, null, null, 3, null]} colEnd={[23, null, null, 20, null]}>
 					<h1
-						className="pt-40 pb-24 font-jetbrains text-[56px]
-					 font-bold uppercase leading-lg tracking-wider text-white lg:text-7xl lg:leading-xl"
+						className="pt-16 pb-12 font-jetbrains text-[56px] font-bold uppercase
+					 leading-lg tracking-normal text-white lg:pt-40 lg:pb-24 lg:text-7xl lg:leading-xl lg:tracking-wider"
 					>
 						Nearly a century driven by a passion for excellence
 					</h1>
