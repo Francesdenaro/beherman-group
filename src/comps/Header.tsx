@@ -2,10 +2,10 @@ import Col from './Layout/Col';
 import Container from './Layout/Container';
 import Nav from './Nav';
 
-const Header = () => {
+const Header = ({ pathname }: { pathname: string }) => {
 	return (
 		<header className="bg-years-pattern bg-center bg-no-repeat py-8">
-			<Nav />
+			<Nav pathname={pathname} />
 			<Container>
 				<Col colStart={[2, null, null, 3, null]} colEnd={[23, null, null, 20, null]}>
 					<h1

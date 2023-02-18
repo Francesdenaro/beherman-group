@@ -17,7 +17,11 @@ const Footer = () => {
 				</Col>
 				<Col className="mb-14 lg:row-start-2" colStart={[2]} colEnd={[26, null, null, null]}>
 					<h4 className="mb-8 whitespace-pre text-2xl text-white">
-						Want to know more?{'\n'}Want to meet us?{'\n'}Be part of the adventure?
+						Want to know more?
+						<br />
+						Want to meet us?
+						<br />
+						Be part of the adventure?
 					</h4>
 					<Cta outline />
 				</Col>
@@ -42,8 +46,10 @@ const Footer = () => {
 				<Col className="mb-14 lg:row-start-2" colStart={[2, null, null, 20]} colEnd={[26, null, null, 26]}>
 					<div className="flex flex-col gap-8 text-sm">
 						<strong className="whitespace-pre font-bold tracking-2xl text-white">
-							INDUSTRIEWEG, 3{'\n'}2880 BORNEM,
-							<br className="hidden lg:block" />
+							INDUSTRIEWEG, 3{'\n'}2880 BORNEM
+							<span className="hidden lg:inline">
+								, <br />
+							</span>
 							BELGIUM
 						</strong>
 						<ul className="flex flex-col gap-4">

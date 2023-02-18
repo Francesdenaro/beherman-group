@@ -1,16 +1,18 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import Cta from '../comps/Cta';
 import Footer from '../comps/Footer';
 import Header from '../comps/Header';
-
 import Col from '../comps/Layout/Col';
 import Container from '../comps/Layout/Container';
 import NameRole from '../comps/NameRole';
 import SectionTitle from '../comps/SectionTitle';
 
 const Page: NextPage = () => {
+	const { pathname } = useRouter();
+	console.log(pathname);
 	return (
 		<div className="bg-primary">
 			<Head>
@@ -18,11 +20,11 @@ const Page: NextPage = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<Header />
+			<Header pathname={pathname} />
 
 			<main>
 				<section>
-					<Container>
+					<Container className="lg:items-start">
 						<Col className="lg:row-start-2" colStart={[1, null, null, 2, null]} colEnd={[27, null, null, 11, null]}>
 							<Image alt="Image of a panoramic view of the office" src="/images/panoramic.jpg" width={554} height={376} />
 						</Col>
@@ -33,7 +35,7 @@ const Page: NextPage = () => {
 							<span className="h-[1px] bg-white lg:mt-6"></span>
 						</Col>
 						<Col className="lg:row-start-2" colStart={[2, null, null, 17]} colEnd={[26, null, null, 25]}>
-							<p className="pt-8 pb-6 text-2xl text-accent lg:pt-3">Our corporate vision for the future is based on the secure foundation of experience and tradition.</p>
+							<p className="pt-8 pb-10 text-2xl text-accent lg:pt-3">Our corporate vision for the future is based on the secure foundation of experience and tradition.</p>
 							<p className="pb-14 leading-7  text-white lg:pb-0">
 								Flexibility and adaptability are vital to our company’s future. We will invest in new technologies where appropriate and adopt an evolutionary approach for our tools
 								and services. Our aim is to respond efficiently and effectively to new markets in a multicultural context.
@@ -41,6 +43,7 @@ const Page: NextPage = () => {
 						</Col>
 					</Container>
 				</section>
+
 				<aside className="lg:pt-28 lg:pb-36">
 					<Container>
 						<Col className="bg-accent px-8 pt-9 pb-11 lg:px-28" colStart={[1, null, null, 3, null]} colEnd={[27, null, null, null, null]}>
@@ -55,18 +58,18 @@ const Page: NextPage = () => {
 				</aside>
 
 				<section>
-					<Container>
-						<Col colStart={[1, null, null, 15, null]} colEnd={[27, null, null, 26, null]}>
+					<Container className="lg:items-start">
+						<Col className="lg:pl-10" colStart={[1, null, null, 15, null]} colEnd={[27, null, null, 26, null]}>
 							<Image alt="Image of a blue truck in a city" src="/images/truck.jpg" width={554} height={376} />
 						</Col>
-						<Col className="lg:row-start-1" colStart={[2, null, null, 15]}>
+						<Col className="lg:row-start-1" colStart={[2, null, null, 3]}>
 							<SectionTitle>Commitment</SectionTitle>
 						</Col>
 						<Col className="lg:row-start-2" colStart={[2, null, null, 2]} colEnd={[11, null, null, 4, null]}>
 							<span className="h-[1px] bg-white lg:mt-6"></span>
 						</Col>
 						<Col className="lg:row-start-2" colStart={[2, null, null, 5]} colEnd={[26, null, null, 14]}>
-							<p className="pt-8 pb-6 text-2xl text-accent lg:pt-3 lg:pr-12 2xl:pr-16">
+							<p className="pt-8 pb-10 text-2xl text-accent lg:pt-3 lg:pr-12 2xl:pr-16">
 								In a world committed to the ecological transition, we want to make our contribution by building the mobility solutions of tomorrow.
 							</p>
 							<p className="pb-14 leading-7  text-white lg:pb-0">
@@ -76,12 +79,13 @@ const Page: NextPage = () => {
 						</Col>
 					</Container>
 				</section>
+
 				<section className="pb-14 lg:pb-34">
-					<Container className="items-start">
-						<Col className="lg:row-start-1" colStart={[2, null, null, null]}>
+					<Container className="lg:items-start">
+						<Col className="lg:row-start-1" colStart={[2, null, null, 3]}>
 							<SectionTitle>The Board</SectionTitle>
 						</Col>
-						<Col className="row-start-2" colStart={[1, null, null, 2, null]} colEnd={[27, null, null, 19, null]}>
+						<Col className="row-start-2" colStart={[1, null, null, 3, null]} colEnd={[27, null, null, 19, null]}>
 							<Image alt="Photo of the board members" src="/images/board.jpg" width={942} height={508} />
 						</Col>
 						<Col className="h-full gap-y-6 border-l-tertiary pt-6 lg:row-start-2 lg:gap-0 lg:border-l lg:pl-9 lg:pt-2" colStart={[2, null, null, 20]} colEnd={[27, null, null, null]}>
@@ -96,6 +100,7 @@ const Page: NextPage = () => {
 						</Col>
 					</Container>
 				</section>
+
 				<Footer />
 			</main>
 		</div>
