@@ -1,9 +1,10 @@
+import { motion } from 'framer-motion';
 import Link from 'next/link';
+
 import Col from './Layout/Col';
 import Container from './Layout/Container';
 import Burger from './Svg/Burger';
 import Logo from './Svg/Logo';
-import { motion } from 'framer-motion';
 
 interface NavItemProps {
 	children: React.ReactNode;

@@ -3,6 +3,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+
 import Cta from '../comps/Cta';
 import Footer from '../comps/Footer';
 import Header from '../comps/Header';

@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+
 import Footer from '../comps/Footer';
 import Col from '../comps/Layout/Col';
 import Container from '../comps/Layout/Container';
