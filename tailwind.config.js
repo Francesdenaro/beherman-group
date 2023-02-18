@@ -42,6 +42,7 @@ module.exports = {
 			colors: {
 				primary: 'hsla(231, 75%, 11%, 1)',
 				accent: 'hsla(209, 79%, 74%, 1)',
+				secondary: 'hsla(205, 46%, 51%, 1)',
 			},
 			backgroundImage: {
 				'years-pattern': "url('/images/years-pattern.svg')",
