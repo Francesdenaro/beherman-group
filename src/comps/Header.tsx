@@ -4,7 +4,7 @@ import Nav from './Nav';
 
 const Header = ({ pathname }: { pathname: string }) => {
 	return (
-		<header className="bg-years-pattern bg-center bg-no-repeat py-8">
+		<header className="bg-years-pattern bg-center bg-no-repeat pb-8">
 			<Nav pathname={pathname} />
 			<Container>
 				<Col colStart={[2, null, null, 3, null]} colEnd={[23, null, null, 20, null]}>

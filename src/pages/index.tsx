@@ -10,7 +10,7 @@ import Nav from '../comps/Nav';
 const Page: NextPage = () => {
 	const { pathname } = useRouter();
 	return (
-		<div className="flex h-screen flex-col justify-between bg-primary pt-8">
+		<div className="flex min-h-screen flex-col justify-between bg-primary pt-8">
 			<Head>
 				<title>Beherman Group</title>
 				<link rel="icon" href="/favicon.ico" />
@@ -18,7 +18,7 @@ const Page: NextPage = () => {
 			<Nav pathname={pathname} />
 			<Container className="mb-auto">
 				<Col>
-					<h1 className="pt-80 font-jetbrains text-7xl uppercase text-white">
+					<h1 className="py-20 font-jetbrains text-xl font-bold uppercase text-white lg:pt-48 lg:text-7xl">
 						Navigate to the{' '}
 						<Link className="underline" href={'/about'}>
 							About page

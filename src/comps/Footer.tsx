@@ -27,18 +27,30 @@ const Footer = () => {
 				</Col>
 				<Col className="mb-14 hidden lg:row-start-2 lg:grid" colStart={[null, null, null, 14]} colEnd={[null, null, null, 16]}>
 					<nav>
-						<ul className="flex flex-col gap-8 uppercase tracking-2xl text-white">
-							<li className="">
-								<Link href={'#'}>Home</Link>
+						<ul className="flex flex-col items-start gap-8 uppercase tracking-2xl text-white">
+							<li>
+								<Link className="group" href={'/'}>
+									Home
+									<span className={`block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full`}></span>
+								</Link>
 							</li>
-							<li className="">
-								<Link href={'#'}>About</Link>
+							<li>
+								<Link className="group" href={'/about'}>
+									About
+									<span className={`block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full`}></span>
+								</Link>
 							</li>
-							<li className="">
-								<Link href={'#'}>History</Link>
+							<li>
+								<Link className="group" href={'#'}>
+									History
+									<span className={`block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full`}></span>
+								</Link>
 							</li>
-							<li className="">
-								<Link href={'#'}>Contact</Link>
+							<li>
+								<Link className="group" href={'#'}>
+									Contact
+									<span className={`block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full`}></span>
+								</Link>
 							</li>
 						</ul>
 					</nav>
@@ -53,14 +65,24 @@ const Footer = () => {
 							BELGIUM
 						</strong>
 						<ul className="flex flex-col gap-4">
-							<li className="flex">
-								<Phone /> <span className="pl-6.5 text-white">+32 (0)3 890 91 11</span>
+							<li>
+								<Link className="flex" href={'tel:+32 (0)3 890 91 11'}>
+									<Phone /> <span className="pl-6.5 text-white">+32 (0)3 890 91 11</span>
+								</Link>
 							</li>
 							<li className="flex">
-								<Fax /> <span className="pl-6.5 text-white">+32 (0)3 890 91 18</span>
+								<Link className="flex" href={'tel:+32 (0)3 890 91 18'}>
+									<Fax /> <span className="pl-6.5 text-white">+32 (0)3 890 91 18</span>
+								</Link>
 							</li>
 							<li className="flex tracking-widest text-white">
-								<Mail /> <span className="pl-6.5 lg:hidden">press@beherman.com</span> <span className="hidden pl-6.5 lg:inline">jacques.beherman@beherman.com</span>
+								<Link className="flex" href={'mailto:press@beherman.com'}>
+									{/* 
+										The Figma file had two different email addresses for different viewports.
+										I decided to use only one to keep the href valid.
+									*/}
+									<Mail /> <span className="pl-6.5">press@beherman.com</span>
+								</Link>
 							</li>
 						</ul>
 					</div>

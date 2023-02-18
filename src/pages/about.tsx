@@ -14,7 +14,7 @@ import SectionTitle from '../comps/SectionTitle';
 const Page: NextPage = () => {
 	const { pathname } = useRouter();
 	return (
-		<div className="bg-primary">
+		<div className="bg-primary pt-8">
 			<Head>
 				<title>Beherman Group</title>
 				<link rel="icon" href="/favicon.ico" />
@@ -23,7 +23,7 @@ const Page: NextPage = () => {
 			<Header pathname={pathname} />
 
 			<main>
-				<motion.section initial={{ opacity: 0, x: -200 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+				<motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
 					<Container className="lg:items-start">
 						<Col className="lg:row-start-2" colStart={[1, null, null, 2, null]} colEnd={[27, null, null, 11, null]}>
 							<Image alt="Image of a panoramic view of the office" src="/images/panoramic.jpg" width={554} height={376} />
@@ -57,7 +57,7 @@ const Page: NextPage = () => {
 					</Container>
 				</aside>
 
-				<motion.section initial={{ opacity: 0, x: 200 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+				<motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
 					<Container className="lg:items-start">
 						<Col className="lg:pl-10" colStart={[1, null, null, 15, null]} colEnd={[27, null, null, 26, null]}>
 							<Image alt="Image of a blue truck in a city" src="/images/truck.jpg" width={554} height={376} />
@@ -81,28 +81,28 @@ const Page: NextPage = () => {
 						</Col>
 					</Container>
 				</motion.section>
-			</main>
 
-			<motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} className="pb-14 lg:pb-34">
-				<Container className="lg:items-start">
-					<Col className="lg:row-start-1" colStart={[2, null, null, 3]}>
-						<SectionTitle>The Board</SectionTitle>
-					</Col>
-					<Col className="row-start-2" colStart={[1, null, null, 3, null]} colEnd={[27, null, null, 19, null]}>
-						<Image alt="Photo of the board members" src="/images/board.jpg" width={942} height={508} />
-					</Col>
-					<Col className="h-full gap-y-6 border-l-tertiary pt-6 lg:row-start-2 lg:gap-0 lg:border-l lg:pl-9 lg:pt-2" colStart={[2, null, null, 20]} colEnd={[27, null, null, null]}>
-						<span className="uppercase tracking-2xl text-white">Left to right</span>
-						<ul className="mb-10 grid grid-cols-2 gap-y-4 gap-x-8 lg:grid-cols-1 lg:gap-y-8">
-							<NameRole name="Paul Borghgraef" role="Director" />
-							<NameRole name="Christian Beherman" role="President" />
-							<NameRole name="Jacques P. Beherman" role="Managing director" />
-							<NameRole name="Olivier Beherman" role="Director" />
-							<NameRole name="Etienne Rosseeuw" role="Director" />
-						</ul>
-					</Col>
-				</Container>
-			</motion.section>
+				<motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} className="pb-14 lg:pb-34">
+					<Container className="lg:items-start">
+						<Col className="lg:row-start-1" colStart={[2, null, null, 3]}>
+							<SectionTitle>The Board</SectionTitle>
+						</Col>
+						<Col className="row-start-2" colStart={[1, null, null, 3, null]} colEnd={[27, null, null, 19, null]}>
+							<Image alt="Photo of the board members" src="/images/board.jpg" width={942} height={508} />
+						</Col>
+						<Col className="h-full gap-y-6 border-l-tertiary pt-6 lg:row-start-2 lg:gap-0 lg:border-l lg:pl-9 lg:pt-2" colStart={[2, null, null, 20]} colEnd={[27, null, null, null]}>
+							<span className="uppercase tracking-2xl text-white">Left to right</span>
+							<ul className="mb-10 grid grid-cols-2 gap-y-4 gap-x-8 lg:grid-cols-1 lg:gap-y-8">
+								<NameRole name="Paul Borghgraef" role="Director" />
+								<NameRole name="Christian Beherman" role="President" />
+								<NameRole name="Jacques P. Beherman" role="Managing director" />
+								<NameRole name="Olivier Beherman" role="Director" />
+								<NameRole name="Etienne Rosseeuw" role="Director" />
+							</ul>
+						</Col>
+					</Container>
+				</motion.section>
+			</main>
 
 			<Footer />
 		</div>
