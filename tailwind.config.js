@@ -55,6 +55,9 @@ module.exports = {
 				lg: '61px',
 				xl: '78px',
 			},
+			padding: {
+				6.5: '22px',
+			},
 		},
 	},
 	plugins: [],

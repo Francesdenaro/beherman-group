@@ -19,7 +19,7 @@ const NavItem = ({ children }: NavItemProps) => {
 const Nav = () => {
 	return (
 		<Container className="bg-primary">
-			<Col className="items-center" colStart={[2, null, null, 2, null]} colEnd={[15, null, null, 6, null]}>
+			<Col className="items-center pl-2" colStart={[2, null, null, 2, null]} colEnd={[15, null, null, 6, null]}>
 				<Logo />
 			</Col>
 			<Col colStart={[22, null, null, 15, null]}>
