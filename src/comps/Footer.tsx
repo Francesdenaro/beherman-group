@@ -69,7 +69,7 @@ const Footer = () => {
 					<LogoMono />
 				</Col>
 				<Col className="lg:row-start-3" colStart={[2, null, null, 13]}>
-					<ul className="flex gap-3 divide-x divide-tertiary-dark border-b border-tertiary-dark pb-2 text-xs tracking-wider text-gray lg:border-b-0 lg:p-0">
+					<ul className="flex items-center gap-3 divide-x divide-tertiary-dark border-b border-tertiary-dark pb-2 text-xs tracking-wider text-gray lg:border-b-0 lg:p-0">
 						<li>
 							<Link href={'#'}>Cookie settings</Link>
 						</li>

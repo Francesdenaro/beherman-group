@@ -79,30 +79,30 @@ const Page: NextPage = () => {
 						</Col>
 					</Container>
 				</section>
-
-				<section className="pb-14 lg:pb-34">
-					<Container className="lg:items-start">
-						<Col className="lg:row-start-1" colStart={[2, null, null, 3]}>
-							<SectionTitle>The Board</SectionTitle>
-						</Col>
-						<Col className="row-start-2" colStart={[1, null, null, 3, null]} colEnd={[27, null, null, 19, null]}>
-							<Image alt="Photo of the board members" src="/images/board.jpg" width={942} height={508} />
-						</Col>
-						<Col className="h-full gap-y-6 border-l-tertiary pt-6 lg:row-start-2 lg:gap-0 lg:border-l lg:pl-9 lg:pt-2" colStart={[2, null, null, 20]} colEnd={[27, null, null, null]}>
-							<span className="uppercase tracking-2xl text-white">Left to right</span>
-							<ul className="mb-10 grid grid-cols-2 gap-y-4 gap-x-8 lg:grid-cols-1 lg:gap-y-8">
-								<NameRole name="Paul Borghgraef" role="Director" />
-								<NameRole name="Christian Beherman" role="President" />
-								<NameRole name="Jacques P. Beherman" role="Managing director" />
-								<NameRole name="Olivier Beherman" role="Director" />
-								<NameRole name="Etienne Rosseeuw" role="Director" />
-							</ul>
-						</Col>
-					</Container>
-				</section>
-
-				<Footer />
 			</main>
+
+			<section className="pb-14 lg:pb-34">
+				<Container className="lg:items-start">
+					<Col className="lg:row-start-1" colStart={[2, null, null, 3]}>
+						<SectionTitle>The Board</SectionTitle>
+					</Col>
+					<Col className="row-start-2" colStart={[1, null, null, 3, null]} colEnd={[27, null, null, 19, null]}>
+						<Image alt="Photo of the board members" src="/images/board.jpg" width={942} height={508} />
+					</Col>
+					<Col className="h-full gap-y-6 border-l-tertiary pt-6 lg:row-start-2 lg:gap-0 lg:border-l lg:pl-9 lg:pt-2" colStart={[2, null, null, 20]} colEnd={[27, null, null, null]}>
+						<span className="uppercase tracking-2xl text-white">Left to right</span>
+						<ul className="mb-10 grid grid-cols-2 gap-y-4 gap-x-8 lg:grid-cols-1 lg:gap-y-8">
+							<NameRole name="Paul Borghgraef" role="Director" />
+							<NameRole name="Christian Beherman" role="President" />
+							<NameRole name="Jacques P. Beherman" role="Managing director" />
+							<NameRole name="Olivier Beherman" role="Director" />
+							<NameRole name="Etienne Rosseeuw" role="Director" />
+						</ul>
+					</Col>
+				</Container>
+			</section>
+
+			<Footer />
 		</div>
 	);
 };

@@ -23,15 +23,17 @@ const Nav = ({ pathname }: { pathname: string }) => {
 	return (
 		<Container className="bg-primary">
 			<Col className="items-center pl-2" colStart={[2, null, null, 2, null]} colEnd={[15, null, null, 6, null]}>
-				<Logo />
+				<Link href={'/'}>
+					<Logo />
+				</Link>
 			</Col>
 			<Col colStart={[22, null, null, 14, null]}>
 				<nav className="hidden lg:block lg:pl-10">
 					<ul className="flex items-center justify-between">
-						<NavItem href="/home">Home</NavItem>
+						<NavItem href="/">Home</NavItem>
 						<NavItem href="/about">About</NavItem>
-						<NavItem href="/history">History</NavItem>
-						<NavItem href="/philantropy">Philantropy</NavItem>
+						<NavItem href="#">History</NavItem>
+						<NavItem href="#">Philantropy</NavItem>
 						<li>
 							<button className="rounded-full bg-white py-2.5 px-6 font-jetbrains text-sm uppercase tracking-2xl transition-colors duration-300 hover:bg-accent hover:text-white">
 								Contact
