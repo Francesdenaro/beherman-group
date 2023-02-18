@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Cta from '../comps/Cta';
+import Footer from '../comps/Footer';
 import Header from '../comps/Header';
 
 import Col from '../comps/Layout/Col';
@@ -75,7 +76,7 @@ const Page: NextPage = () => {
 						</Col>
 					</Container>
 				</section>
-				<section className="pb-34">
+				<section className="pb-14 lg:pb-34">
 					<Container className="items-start">
 						<Col className="lg:row-start-1" colStart={[2, null, null, null]}>
 							<SectionTitle>The Board</SectionTitle>
@@ -95,6 +96,7 @@ const Page: NextPage = () => {
 						</Col>
 					</Container>
 				</section>
+				<Footer />
 			</main>
 		</div>
 	);
