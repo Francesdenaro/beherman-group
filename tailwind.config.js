@@ -39,6 +39,21 @@ module.exports = {
 			gridTemplateColumns: {
 				container: '[full-start] minmax(calc(calc(100% - 1440px) / 2), 1fr) [main-start] repeat(24, [col-start] 1fr) [main-end] minmax(calc(calc(100% - 1440px) / 2), 1fr) [full-end]',
 			},
+			colors: {
+				primary: 'hsla(231, 75%, 11%, 1)',
+				accent: 'hsla(209, 79%, 74%, 1)',
+			},
+			backgroundImage: {
+				'years-pattern': "url('/images/years-pattern.svg')",
+			},
+			letterSpacing: {
+				xl: '0.15em',
+				'2xl': '0.2em',
+			},
+			lineHeight: {
+				lg: '61px',
+				xl: '78px',
+			},
 		},
 	},
 	plugins: [],
